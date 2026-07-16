@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'tokens.json'
+      - 'build.js'
 
 jobs:
   build:
@@ -23,12 +24,15 @@ jobs:
           node-version: '18'
 
       - name: 📦 Instalar dependencias
-        run: npm install
+        run: npm install --legacy-peer-deps
+
+      - name: 🛠️ Unificar y resolver tokens
+        run: npx --yes token-transformer tokens.json tokens-resolved.json
 
       - name: 🏗️ Compilar Tokens a CSS
-        run: npm run build --legacy-peer-deps
+        run: npm run build
 
-      - name: 🚀 Hacer commit automático del CSS nuevo
+      - name: 🚀 Hacer commit automático
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "🎨 Auto-generar: _variables.css actualizado desde Figma"
