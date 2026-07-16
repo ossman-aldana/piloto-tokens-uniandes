@@ -27,7 +27,7 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: 🛠️ Unificar y resolver tokens
-        run: npx --yes token-transformer tokens.json tokens-resolved.json
+        run: npx --yes token-transformer tokens.json tokens-resolved.json global,theme-uniandes,theme-economia
 
       - name: 🏗️ Compilar Tokens a CSS
         run: npm run build
