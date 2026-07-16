@@ -1,0 +1,12 @@
+{
+  "name": "piloto-tokens-uniandes",
+  "version": "1.0.0",
+  "description": "Sandbox para compilar Tokens Studio a CSS",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "@tokens-studio/sd-transforms": "^0.16.0",
+    "style-dictionary": "^3.9.0"
+  }
+}
