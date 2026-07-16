@@ -1,0 +1,109 @@
+/* ==========================================
+   CONFIGURACIÓN DE TEMAS (La magia de los Tokens)
+   ========================================== */
+
+/* Tema Uniandes */
+.theme-uniandes {
+  --bg-principal: var(--global-color-neutral-white); /* Usa tu variable de color blanco */
+  --texto-principal: var(--theme-uniandes-color-content-default);
+  --color-accion: var(--theme-uniandes-color-action-main); /* Amarillo */
+  --color-texto-boton: #000000; /* Contraste para el amarillo */
+}
+
+/* Tema Economía */
+.theme-economia {
+  --bg-principal: var(--global-color-neutral-white); 
+  --texto-principal: var(--theme-uniandes-color-content-default);
+  --color-accion: var(--theme-economia-color-action-main); /* Azul */
+  --color-texto-boton: #ffffff; /* Contraste para el azul */
+}
+
+/* ==========================================
+   ESTILOS GENERALES (Usando tus tokens globales)
+   ========================================== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--global-font-families-primary), sans-serif;
+  background-color: var(--bg-principal);
+  color: var(--texto-principal);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-weight: var(--global-font-weights-bold);
+  font-size: 24px;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.badge {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: var(--global-font-weights-semibold);
+  letter-spacing: 2px;
+  opacity: 0.7;
+}
+
+.hero-title {
+  font-size: var(--global-font-sizes-desktop-title);
+  font-weight: var(--global-font-weights-bold);
+  margin: 20px 0;
+  line-height: 1.2;
+}
+
+.hero-text {
+  font-size: var(--global-font-sizes-desktop-md);
+  font-weight: var(--global-font-weights-regular);
+  opacity: 0.8;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   BOTONES 
+   ========================================== */
+.btn-cta {
+  background-color: var(--color-accion);
+  color: var(--color-texto-boton);
+  font-weight: var(--global-font-weights-bold);
+  padding: 15px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--texto-principal);
+  color: var(--texto-principal);
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: var(--global-font-weights-semibold);
+}
