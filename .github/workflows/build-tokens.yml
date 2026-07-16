@@ -26,7 +26,7 @@ jobs:
         run: npm install
 
       - name: 🏗️ Compilar Tokens a CSS
-        run: npm run build
+        run: npm run build --legacy-peer-deps
 
       - name: 🚀 Hacer commit automático del CSS nuevo
         uses: stefanzweifel/git-auto-commit-action@v5
