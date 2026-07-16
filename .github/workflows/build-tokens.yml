@@ -1,0 +1,35 @@
+name: Build Design Tokens
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'tokens.json'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 📥 Clonar el repositorio
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 📦 Instalar dependencias
+        run: npm install
+
+      - name: 🏗️ Compilar Tokens a CSS
+        run: npm run build
+
+      - name: 🚀 Hacer commit automático del CSS nuevo
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🎨 Auto-generar: _variables.css actualizado desde Figma"
+          file_pattern: 'build/css/_variables.css'
