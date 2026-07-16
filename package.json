@@ -6,7 +6,7 @@
     "build": "node build.js"
   },
   "dependencies": {
-    "@tokens-studio/sd-transforms": "^0.16.0",
+    "@tokens-studio/sd-transforms": "0.14.0",
     "style-dictionary": "^3.9.0"
   }
 }
