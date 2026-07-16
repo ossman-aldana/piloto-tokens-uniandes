@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piloto Design Tokens - Uniandes</title>
+  
+  <!-- 1. Cargamos el archivo CSS que genera tu robot de tokens -->
+  <link rel="stylesheet" href="build/css/_variables.css">
+  
+  <!-- 2. Cargamos nuestros estilos propios que acabamos de crear -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-uniandes">
+
+  <header class="navbar">
+    <div class="logo">Uniandes</div>
+    <button id="theme-toggler" class="btn-secondary">Cambiar a Economía</button>
+  </header>
+
+  <main class="hero">
+    <div class="hero-content">
+      <span class="badge">Piloto Design Tokens</span>
+      <h1 class="hero-title">Construyendo el futuro digital de la Universidad</h1>
+      <p class="hero-text">
+        Esta landing page está conectada directamente a Figma. Cualquier cambio de color o tipografía que se apruebe en diseño, se actualizará aquí automáticamente gracias a nuestro robot.
+      </p>
+      <button class="btn-cta">Iniciar Admisiones</button>
+    </div>
+  </main>
+
+  <script>
+    const toggler = document.getElementById('theme-toggler');
+    const body = document.body;
+
+    toggler.addEventListener('click', () => {
+      if (body.classList.contains('theme-uniandes')) {
+        body.classList.replace('theme-uniandes', 'theme-economia');
+        toggler.textContent = 'Cambiar a Uniandes';
+      } else {
+        body.classList.replace('theme-economia', 'theme-uniandes');
+        toggler.textContent = 'Cambiar a Economía';
+      }
+    });
+  </script>
+</body>
+</html>
