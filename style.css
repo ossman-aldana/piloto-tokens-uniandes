@@ -1,21 +1,21 @@
 /* ==========================================
-   CONFIGURACIÓN DE TEMAS (La magia de los Tokens)
+   CONFIGURACIÓN DE TEMAS (Sin Fallbacks para pruebas)
    ========================================== */
 
 /* Tema Uniandes */
 .theme-uniandes {
-  --bg-principal: var(--color-neutral-white, #ffffff);
-  --texto-principal: var(--color-neutral-90, #4D4D4C);
-  --color-accion: var(--color-brand-uniandes, #FFE800); /* Amarillo */
-  --color-texto-boton: #000000; /* Contraste para el amarillo */
+  --bg-principal: var(--color-neutral-white);
+  --texto-principal: var(--color-neutral-90);
+  --color-accion: var(--color-brand-uniandes); /* Si no coincide, el botón perderá el color */
+  --color-texto-boton: #000000; 
 }
 
 /* Tema Economía */
 .theme-economia {
-  --bg-principal: var(--color-neutral-white, #ffffff); 
-  --texto-principal: var(--color-neutral-90, #4D4D4C);
-  --color-accion: var(--color-brand-facultad-economia, #1c38c9); /* Azul */
-  --color-texto-boton: #ffffff; /* Contraste para el azul */
+  --bg-principal: var(--color-neutral-white); 
+  --texto-principal: var(--color-neutral-90);
+  --color-accion: var(--color-brand-facultad-economia); /* Si no coincide, el botón perderá el color */
+  --color-texto-boton: #ffffff; 
 }
 
 /* ==========================================
