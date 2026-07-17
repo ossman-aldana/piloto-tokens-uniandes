@@ -1,10 +1,10 @@
 /**
  * Do not edit directly
- * Generated on Fri, 17 Jul 2026 00:31:53 GMT
+ * Generated on Fri, 17 Jul 2026 00:55:19 GMT
  */
 
 :root {
-  --colorActionMain: #000000;
+  --colorActionMain: #222222;
   --colorBackgroundDefault: #ffffff;
   --colorBackgroundAlt: #1f1fe6;
   --colorContentDefault: #4D4D4C;
@@ -12,7 +12,7 @@
   --colorNeutral90: #4D4D4C;
   --colorNeutralWhite: #ffffff; /* Blanco puro del sistema */
   --colorBrandUniandes: #FFE800; /* Amarillo principal de la Universidad */
-  --colorBrandFacultadEconomia: #000000; /* Azul piloto para Economia */
+  --colorBrandFacultadEconomia: #222222; /* Azul piloto para Economia */
   --typographyBodyMd400: 400 16px/24 Source Sans 3; /* Cuerpo de texto estándar (Desktop) */
   --typographyTitle700: 700 48px/56 Source Sans 3; /* Título principal (Desktop) */
   --fontFamiliesPrimary: Source Sans 3;
