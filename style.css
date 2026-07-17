@@ -4,17 +4,17 @@
 
 /* Tema Uniandes */
 .theme-uniandes {
-  --bg-principal: var(--global-color-neutral-white); /* Usa tu variable de color blanco */
-  --texto-principal: var(--theme-uniandes-color-content-default);
-  --color-accion: var(--theme-uniandes-color-action-main); /* Amarillo */
+  --bg-principal: var(--color-neutral-white, #ffffff);
+  --texto-principal: var(--color-neutral-90, #4D4D4C);
+  --color-accion: var(--color-brand-uniandes, #FFE800); /* Amarillo */
   --color-texto-boton: #000000; /* Contraste para el amarillo */
 }
 
 /* Tema Economía */
 .theme-economia {
-  --bg-principal: var(--global-color-neutral-white); 
-  --texto-principal: var(--theme-uniandes-color-content-default);
-  --color-accion: var(--theme-economia-color-action-main); /* Azul */
+  --bg-principal: var(--color-neutral-white, #ffffff); 
+  --texto-principal: var(--color-neutral-90, #4D4D4C);
+  --color-accion: var(--color-brand-facultad-economia, #1c38c9); /* Azul */
   --color-texto-boton: #ffffff; /* Contraste para el azul */
 }
 
@@ -24,7 +24,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: var(--global-font-families-primary), sans-serif;
+  font-family: var(--font-families-primary), sans-serif;
   background-color: var(--bg-principal);
   color: var(--texto-principal);
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -39,7 +39,7 @@ body {
 }
 
 .logo {
-  font-weight: var(--global-font-weights-bold);
+  font-weight: var(--font-weights-bold);
   font-size: 24px;
 }
 
@@ -59,21 +59,21 @@ body {
 .badge {
   text-transform: uppercase;
   font-size: 12px;
-  font-weight: var(--global-font-weights-semibold);
+  font-weight: var(--font-weights-semibold);
   letter-spacing: 2px;
   opacity: 0.7;
 }
 
 .hero-title {
-  font-size: var(--global-font-sizes-desktop-title);
-  font-weight: var(--global-font-weights-bold);
+  font-size: var(--font-sizes-desktop-title);
+  font-weight: var(--font-weights-bold);
   margin: 20px 0;
   line-height: 1.2;
 }
 
 .hero-text {
-  font-size: var(--global-font-sizes-desktop-md);
-  font-weight: var(--global-font-weights-regular);
+  font-size: var(--font-sizes-desktop-md);
+  font-weight: var(--font-weights-regular);
   opacity: 0.8;
   margin-bottom: 40px;
   line-height: 1.6;
@@ -85,7 +85,7 @@ body {
 .btn-cta {
   background-color: var(--color-accion);
   color: var(--color-texto-boton);
-  font-weight: var(--global-font-weights-bold);
+  font-weight: var(--font-weights-bold);
   padding: 15px 40px;
   border: none;
   border-radius: 8px;
@@ -105,5 +105,5 @@ body {
   padding: 10px 20px;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: var(--global-font-weights-semibold);
+  font-weight: var(--font-weights-semibold);
 }
